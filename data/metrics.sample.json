@@ -1,0 +1,150 @@
+{
+  "schema_version": "abgp.dashboard.v1",
+  "visibility": "public",
+  "updated_at": "2026-05-20T17:14:00+08:00",
+  "project": {
+    "name": "阿布高频 BTC Trading System",
+    "stage": "research",
+    "description": "基于 Al Brooks 价格行为框架的 BTC 高频次系统化交易项目",
+    "strategy_version": "v0.1-charter",
+    "risk_version": "v0.1-risk-framework",
+    "data_version": "v0.1-placeholder"
+  },
+  "targets": {
+    "monthly_trades_min": 100,
+    "annual_return_min_pct": 20,
+    "max_leverage": 3,
+    "initial_capital_cny": 1500000,
+    "monthly_cagr_target_pct": 1.530947,
+    "monthly_profit_target_cny": 22964,
+    "avg_net_profit_per_trade_target_cny": 250,
+    "max_drawdown_policy": "pending_confirmation"
+  },
+  "status": {
+    "dashboard_status": "prototype",
+    "data_status": "placeholder",
+    "risk_state": "normal",
+    "current_phase_note": "项目基准、setup 模板、数据结构建设中；回测与实盘数据尚未接入。"
+  },
+  "backtest": {
+    "connected": false,
+    "sample_period": null,
+    "trade_count": null,
+    "annual_return_pct": null,
+    "max_drawdown_pct": null,
+    "profit_factor": null,
+    "expectancy_r": null,
+    "win_rate_pct": null,
+    "cost_to_gross_profit_pct": null,
+    "rolling_expectancy": {
+      "last_50": null,
+      "last_100": null,
+      "last_200": null
+    },
+    "setup_attribution": []
+  },
+  "live": {
+    "connected": false,
+    "equity_cny": null,
+    "month_return_pct": null,
+    "month_trade_count": null,
+    "current_drawdown_pct": null,
+    "max_drawdown_pct": null,
+    "avg_slippage_bps": null,
+    "fees_cny": null,
+    "funding_cny": null,
+    "leverage_current": null,
+    "leverage_peak": null
+  },
+  "risk": {
+    "single_trade_risk_pct_default": 0.1,
+    "single_trade_risk_pct_hard_max": 0.3,
+    "daily_loss_stop_pct": 1.2,
+    "weekly_loss_stop_pct": 3.0,
+    "monthly_loss_stop_pct": 6.0,
+    "drawdown_warning_pct": 5.0,
+    "drawdown_derisk_pct": 8.0,
+    "drawdown_pause_pct": 10.0,
+    "drawdown_offline_pct": 12.0,
+    "kill_switch": "armed",
+    "recent_events": []
+  },
+  "setups": [
+    {
+      "id": "S01",
+      "family": "Trend Continuation",
+      "name": "强趋势 H1/H2 / L1/L2 回调",
+      "status": "draft",
+      "evidence": [
+        "Brooks",
+        "Project",
+        "Needs Validation"
+      ],
+      "sample_count": 0,
+      "public_summary": "强 Always-In 背景下的顺势回调交易候选",
+      "public_metrics": {
+        "trade_count": null,
+        "profit_factor": null,
+        "expectancy_r": null,
+        "max_drawdown_pct": null
+      }
+    },
+    {
+      "id": "S02",
+      "family": "Breakout Pullback",
+      "name": "突破回调 / 突破测试",
+      "status": "draft",
+      "evidence": [
+        "Brooks",
+        "Project",
+        "Needs Validation"
+      ],
+      "sample_count": 0,
+      "public_summary": "强突破后等待回踩关键位的继续方向机会",
+      "public_metrics": {
+        "trade_count": null,
+        "profit_factor": null,
+        "expectancy_r": null,
+        "max_drawdown_pct": null
+      }
+    },
+    {
+      "id": "S03",
+      "family": "Failed Breakout",
+      "name": "交易区间边缘失败突破",
+      "status": "draft",
+      "evidence": [
+        "Brooks",
+        "Project",
+        "Needs Validation"
+      ],
+      "sample_count": 0,
+      "public_summary": "区间上下沿突破失败后重新回到区间的反向候选",
+      "public_metrics": {
+        "trade_count": null,
+        "profit_factor": null,
+        "expectancy_r": null,
+        "max_drawdown_pct": null
+      }
+    },
+    {
+      "id": "S04",
+      "family": "Reversal",
+      "name": "严格 MTR / 楔形反转",
+      "status": "draft",
+      "evidence": [
+        "Brooks",
+        "Project",
+        "Needs Validation"
+      ],
+      "sample_count": 0,
+      "public_summary": "趋势线被破坏、回测极值失败并出现反向跟进后的候选",
+      "public_metrics": {
+        "trade_count": null,
+        "profit_factor": null,
+        "expectancy_r": null,
+        "max_drawdown_pct": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "阿布高频项目看板",
+  "short_name": "阿布高频",
+  "description": "公开可查看的阿布高频项目回测、实盘、风控和 setup 概览。",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#7132f5",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "风控状态",
+      "short_name": "风控",
+      "url": "./index.html#risk"
+    },
+    {
+      "name": "Setup 库",
+      "short_name": "Setup",
+      "url": "./index.html#setups"
+    }
+  ]
+}
